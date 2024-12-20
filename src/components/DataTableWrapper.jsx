@@ -88,7 +88,7 @@ const DataTableWrapper = ({ fetchUrl, insertUrl }) => {
 
   return (
     <div>
-      <h2>Data Table with Add Row Modal</h2>
+      <h2>React and jQuery Datatables CRUD Operations</h2>
 
       {/* Modal */}
       {isModalOpen && (
@@ -156,10 +156,13 @@ const DataTableWrapper = ({ fetchUrl, insertUrl }) => {
           data={tableData}
           columns={columns}
           options={{
+            layout: {
+              topStart: "buttons",
+            },
             responsive: true,
             select: true,
-            buttons: ["copy", "csv", "excel", "pdf"],
           }}
+					className="display"
         />
       ) : (
         <p>Loading data...</p>
